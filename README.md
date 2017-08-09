@@ -8,12 +8,12 @@ models from protobuffs definitions.
 
 
 ## Usage
-
+i
 Get protobuff compiler from [here](https://github.com/google/protobuf/releases)
 
 ```
 go get -u github.com/golang/protobuf/protoc-gen-go
-go get -u github.com/itsankoff/protobuff/
+go get -u github.com/itsankoff/protobuffs/
 
 # make sure GOPATH/bin is in you PATH, because protobuff compiler needs to
 # find protoc-gen-go in order to compile the definitions to go models
