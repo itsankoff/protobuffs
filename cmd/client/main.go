@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/golang/protobuf/proto"
-	"github.com/itsankoff/protobuf/def"
+	"github.com/itsankoff/protobuffs/def"
 	"net/http"
 )
 
