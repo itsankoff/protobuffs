@@ -22,7 +22,7 @@ go get -u github.com/itsankoff/protobuffs/
 # to first generate models from protobuffs definitions
 protoc --go_out=../ *
 
-# go to /path/to/workspace/github.com/itsankoff/protobuff/
+# go to /path/to/workspace/github.com/itsankoff/protobuffs/
 go run ./cmd/server/main.go
 go run ./cmd/client/main.go
 ```
