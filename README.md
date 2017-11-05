@@ -8,21 +8,24 @@ models from protobuffs definitions.
 
 
 ## Usage
-i
 Get protobuff compiler from [here](https://github.com/google/protobuf/releases)
 
 ```
+# Get protobuff go extension
 go get -u github.com/golang/protobuf/protoc-gen-go
+
+# Get the repo
 go get -u github.com/itsankoff/protobuffs/
 
-# make sure GOPATH/bin is in you PATH, because protobuff compiler needs to
-# find protoc-gen-go in order to compile the definitions to go models
+# Make sure GOPATH/bin is in you PATH, because protobuff compiler needs to
+# find protoc-gen-go in order to compile the definitions to go models.
 
-# go to /path/to/workspace/github.com/itsankoff/protobuff/def/definitions
-# to first generate models from protobuffs definitions
-protoc --go_out=../ *
+# Go to $GOPATH/src/github.com/itsankoff/protobuff/
+# Executing the following command will generate go models from the definitions
+# within $(pwd)/def/definitions folder.
+protoc --proto_path=$(pwd)/def/definitions --go_out=$(pwd)/def $(pwd)/def/definitions/*.proto
 
-# go to /path/to/workspace/github.com/itsankoff/protobuffs/
+# Start server and client
 go run ./cmd/server/main.go
 go run ./cmd/client/main.go
 ```
